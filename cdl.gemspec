@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["nduval.dev@gmail.com"]
   spec.description   = %q{Color Decision List (ASC CDL) parser}
   spec.summary       = %q{Color Decision List (ASC CDL) parser}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/nicolasduval/cdl"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
