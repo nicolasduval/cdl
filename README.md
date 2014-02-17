@@ -1,6 +1,6 @@
 # Cdl
 
-TODO: Write a gem description
+Parser Color Decision List ( ASC CDL ) files 
 
 ## Installation
 
@@ -16,9 +16,41 @@ Or install it yourself as:
 
     $ gem install cdl
 
-## Usage
+## Cdl::Edl Usage
 
-TODO: Write usage instructions here
+
+	require "cdl"
+	
+	cdl = Cdl::Edl.new("cdl_file.edl")
+	
+	cdl.to_hash
+	#=> [{:slope=>"1.2301 1.2175 1.2033", 
+		  :offset=>"-0.0730 -0.0428 -0.0162", 
+		  :power=>"1.0463 1.0538 1.0680", 
+		  :sat=>"1.1002"}, ... ]
+	
+	
+	cdl.slope
+	#=> [{:red	 =>	 ["1.2301", "1.0246", "1.0246", "1.2998", ..., 
+		  :green =>  ["1.2175", "1.0136", "1.0136", "1.3138", ..., 
+		  :blue  =>  ["1.2033", "1.0008", "1.0008", "1.3165", ... }]
+
+	cdl.offset
+	#=> [{:red	 =>	 ["1.23...
+	
+	cdl.power
+	#=> [{:red	 =>	 ["1.23...
+	
+	cdl.sat
+	#=> ["1.2301", "1.0246", ...,
+
+
+	
+	
+## TODO
+
+* Add clip name and tape name
+* Add XML module ( parse Cdl Xml files )
 
 ## Contributing
 
